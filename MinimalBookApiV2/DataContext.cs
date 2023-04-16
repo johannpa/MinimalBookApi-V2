@@ -14,5 +14,7 @@ namespace MinimalBookApiV2
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseSqlServer("Server=.\\SQLExpress; Database=minimalbookbd; Trusted_Connection=True;TrustServerCertificate=true;");
         }
+
+        public DbSet<Book> Books => Set<Book>();
     }
 }
